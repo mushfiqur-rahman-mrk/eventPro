@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+ 
 import Navbar from "../../Components/Header/Navbar";
 
 const ServiceDetailCard = ({ eventData }) => {
-  const [loading, setLoading] = useState(false);
-  console.log(eventData.length);
+  // const [loading, setLoading] = useState(false);
+  // console.log(eventData.length);
 //   useEffect(()=>{
 //     if(eventData.length <= 0){
 //         setLoading(true);
@@ -14,12 +14,12 @@ const ServiceDetailCard = ({ eventData }) => {
 //     }
   
 //   }, [eventData.length]);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 500);
+  // }, []);
   console.log(eventData);
   const { title, image, price, description } = eventData || {}
 //   console.log(image[0]);
@@ -28,11 +28,6 @@ const ServiceDetailCard = ({ eventData }) => {
 
     <>
     <Navbar></Navbar>
-      {loading ? (
-        <div className="bg-slate-900 h-[100vh] flex justify-center items-center">
-          <span className="loading loading-spinner text-secondary"></span>
-        </div>
-      ) : (
         <div>
           <div className="bg-red-600 h-20"></div>
           <div className="grid grid-cols-2 items-center max-w-5xl gap-10 mx-auto">
@@ -66,7 +61,7 @@ const ServiceDetailCard = ({ eventData }) => {
             </div>
           </div>
         </div>
-      )}
+       
     </>
   );
 };

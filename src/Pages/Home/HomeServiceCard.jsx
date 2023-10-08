@@ -10,7 +10,8 @@ const HomeServiceCard = ({data}) => {
     <>
       <div className="card bg-base-100 shadow-xl border">
         <figure>
-          <img
+          <img 
+            className="h-72 w-full"
             src={image}
             alt="Shoes"
           />

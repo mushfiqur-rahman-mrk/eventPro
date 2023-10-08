@@ -27,7 +27,7 @@ import slider3 from "../../assets/weeding banner.jpeg"
 const BannerSlider = () => {
   return (
     <>
-      <div className="carousel w-full h-[80vh]">
+      <div className="carousel w-full h-[90vh]">
         <div id="slide1" className="carousel-item relative w-full">
           <img  src={slider1} className="w-full object-cover object-center" />
           <div className="absolute top-0 opacity-40 bg-white w-full h-full"></div>

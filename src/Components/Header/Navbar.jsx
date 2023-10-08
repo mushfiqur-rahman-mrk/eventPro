@@ -1,7 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import logoimg from "../../../src/assets/logo.png"
+import { useContext } from "react";
+import { AuthContext } from "../../Authentication/Authentication";
 
 const Navbar = () => {
+  const {user,logOut}=useContext(AuthContext)
+
+  const handleLogout=()=>{
+    logOut()
+    .then(()=>{
+      console.log('logged out successfully');
+    })
+    .catch(error=>console.log(error))
+  }
+
+
+
   const navlinks=<>
   <li className="font-semibold text-md"><NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-500 underline" : ""}>Home</NavLink></li>
   <li className="font-semibold text-md"><NavLink to="/services" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-500 underline" : ""}>Services</NavLink></li>
@@ -9,7 +23,7 @@ const Navbar = () => {
   </>
   return (
     <>
-      <div className="navbar bg-base-100 shadow-md">
+      <div className="navbar bg-base-100 shadow-md px-10">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +62,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to={'/signup'}><button className="btn">Sign Up</button></Link>
+          {
+            user ? <button onClick={handleLogout} className="btn">Log Out</button>
+            :
+            <Link to={'/signup'}><button className="btn">Sign Up</button></Link>
+          }
         </div>
       </div>
     </>
