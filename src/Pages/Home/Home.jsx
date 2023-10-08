@@ -3,7 +3,7 @@ import HomeServiceCard from "./HomeServiceCard";
 import Review from "./Review";
 import WhyUs from "./WhyUs";
 import BannerSlider from "../../Components/Header/BannerSlider";
-import logoimg from "../../../src/assets/logo.png"
+import logoimg from "../../../src/assets/logo1.png"
 import NumberBar from "../../Components/NumberBar";
 import "./home.css";
 
@@ -75,17 +75,13 @@ const Home = () => {
 </div>
 
 
-
-
-
-
     </div>
 
       <WhyUs></WhyUs>
       <div className="max-w-7xl mx-auto my-20">
         <h1 className="text-4xl mb-10 font-bold text-center">Our Services</h1>
         <div >
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 px-5">
             {
                 ServiceData.slice(0, 6).map((data) => (<HomeServiceCard data={data} key={data.id}></HomeServiceCard>))
             }

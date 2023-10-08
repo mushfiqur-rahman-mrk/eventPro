@@ -105,7 +105,11 @@ const Login = () => {
         </div>
       </div> */}
 
-
+<div className="h-10 w-40 bg-orange-500"></div>
+<div className="h-10 w-40 bg-orange-600"></div>
+<div className="h-10 w-40 bg-orange-700"></div>
+<div className="h-10 w-40 bg-orange-400"></div>
+<div className="h-10 w-40 bg-orange-200"></div>
 
 <h1 className="text-2xl text-center font-bold my-10">
         Log in Your Account Now!</h1>

@@ -6,7 +6,7 @@ import user3 from "/src/assets/user3.jpg";
 const Review = () => {
   return (
     <>
-      <div className="max-w-6xl mx-auto my-20 grid grid-cols-2 justify-center items-center ">
+      <div className="max-w-6xl mx-auto px-10 my-20 grid grid-cols-1 lg:grid-cols-2 justify-center items-center ">
         <div>
           <h1 className="text-3xl font-bold text-center mb-10">
             Word from our Customers
@@ -25,7 +25,7 @@ const Review = () => {
                 <div className="text-gray-600 font-poopins mt-3">
                   <div className="container px-5 mx-auto">
                     <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-                      <p className="text-lg">
+                      <p className="text-lg md:px-10">
                         Edison bulb retro cloud bread echo park, helvetica
                         stumptown taiyaki taxidermy 90's cronut +1 kinfolk.
                         Single-origin coffee ennui shaman taiyaki vape DIY tote
@@ -53,7 +53,7 @@ const Review = () => {
 
             <div
               id="slides2"
-              className="carousel-item relative w-full bg-red-500"
+              className="carousel-item relative w-full"
             >
               <div className="w-full  flex flex-col justify-center items-center">
                 <div className="w-28">
@@ -62,7 +62,7 @@ const Review = () => {
                 <div className="text-gray-600 font-poopins mt-3">
                   <div className="container px-5 mx-auto">
                     <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-                      <p className="text-lg">
+                      <p className="text-lg md:px-10">
                         Edison bulb retro cloud bread echo park, helvetica
                         stumptown taiyaki taxidermy 90's cronut +1 kinfolk.
                         Single-origin coffee ennui shaman taiyaki vape DIY tote
@@ -90,7 +90,7 @@ const Review = () => {
 
             <div
               id="slides3"
-              className="carousel-item relative w-full bg-red-500"
+              className="carousel-item relative w-full"
             >
               <div className="w-full  flex flex-col justify-center items-center">
                 <div className="w-28">
@@ -99,7 +99,7 @@ const Review = () => {
                 <div className="text-gray-600 font-poopins mt-3">
                   <div className="container px-5 mx-auto">
                     <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-                      <p className="text-lg">
+                      <p className="text-lg md:px-10">
                         Edison bulb retro cloud bread echo park, helvetica
                         stumptown taiyaki taxidermy 90's cronut +1 kinfolk.
                         Single-origin coffee ennui shaman taiyaki vape DIY tote

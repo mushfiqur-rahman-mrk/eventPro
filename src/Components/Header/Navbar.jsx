@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logoimg from "../../../src/assets/logo.png"
+import logoimg from "../../../src/assets/logo1.png"
 import { useContext } from "react";
 import { AuthContext } from "../../Authentication/Authentication";
 

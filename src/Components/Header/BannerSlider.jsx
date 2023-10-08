@@ -20,8 +20,8 @@
 
  
  
-import slider1 from "../../assets/housewarming banner.jpeg"
-import slider2 from "../../assets/nameing party banner-1.jpeg"
+import slider2 from "../../assets/housewarming banner.jpeg"
+import slider1 from "../../assets/nameing party banner-2.jpeg"
 import slider3 from "../../assets/weeding banner.jpeg"
 
 const BannerSlider = () => {
