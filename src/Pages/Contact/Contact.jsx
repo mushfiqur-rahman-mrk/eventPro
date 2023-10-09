@@ -11,9 +11,9 @@ const Contact = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="grid grid-cols-3 my-20 gap-8 max-w-6xl mx-auto justify-center items-center" data-aos="fade-up"
+      <div className="grid grid-cols-1 md:grid-cols-3 my-20 gap-8 px-5 max-w-6xl mx-auto justify-center items-center" data-aos="fade-up"
      data-aos-duration="3000">
-        <div >
+        <div className="hidden md:block" >
           <img className="rounded-br-full" src={logimage1} alt="" />
           <img className="rounded-tr-full" src={logimage2} alt="" />
         </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                   >
                     Send message
                   </button>
-                  <button  className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl shadow-lg w-1/2">Submit</button>
+                  <button  className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl shadow-lg mx-auto md:w-1/2 ">Submit</button>
                 </form>
                 
               </div>

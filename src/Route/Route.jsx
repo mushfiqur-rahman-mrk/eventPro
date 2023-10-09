@@ -19,7 +19,7 @@ import Testimonial from "../Pages/Testimonial/Testimonial";
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-      errorElement: <Error></Error>,
+      // errorElement: <Error></Error>,
       children:[
         {
             path:"/",

@@ -59,8 +59,8 @@ const Signup = () => {
       <h1 className="text-2xl text-center font-bold my-10">
         Create Your Account Now!
       </h1>
-      <div className="grid grid-cols-3 max-w-6xl mx-auto mb-20">
-        <div className="shadow-xl rounded-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-3 px-5 max-w-6xl mx-auto mb-20">
+        <div className="shadow-xl rounded-xl hidden lg:block">
           <img className="rounded-xl h-full" src={logimage1} alt="" />
         </div>
         <div className="col-span-2">
@@ -70,9 +70,7 @@ const Signup = () => {
               <button className="btn mr-2" onClick={handleGoogle}>
                 <FcGoogle className="text-2xl"></FcGoogle>Continue With Google
               </button>
-              <button className="btn">
-                <BsGithub className="text-2xl"> </BsGithub>Continue With GitHub
-              </button>
+               
             </div>
             <div className="flex justify-center items-center gap-3">
               <hr className="w-40 h-1"></hr>
