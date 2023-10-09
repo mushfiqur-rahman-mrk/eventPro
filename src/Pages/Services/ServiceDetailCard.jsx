@@ -31,15 +31,15 @@ const ServiceDetailCard = ({ eventData }) => {
     <>
     <Navbar></Navbar>
         <div>
-          <div className="bg-red-600 h-20"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 px-8 items-center max-w-5xl gap-10 mx-auto" data-aos="fade-up"
+           
+          <div className="grid grid-cols-1 md:grid-cols-2 px-8 mt-10  items-center max-w-5xl gap-10 mx-auto" data-aos="fade-up"
      data-aos-duration="3000">
             <div className="border">
               <div className="mb-2">
                 <img src={image} alt="" />
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <div className="bg-pink-400 h-full"></div>
+                <div className="bg-gradient-to-r from-orange-500 to-red-500  h-full"></div>
                 <div>
                   <img src={image4} alt="" />
                 </div>

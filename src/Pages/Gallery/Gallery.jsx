@@ -11,55 +11,55 @@ const Gallery = () => {
         </div>
          
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-20 px-10">
-    <div className="grid gap-4" data-aos="fade-right"
+    <div className="grid gap-4" data-aos="zoom-in"
      data-aos-duration="2000">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/KWqCg8H/holiday-1.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/y4y0mkr/promotion-2.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/3WpTcBF/housewarming-2.jpg" alt=""/>
         </div>
     </div>
 
     <div className="grid gap-4" data-aos="fade-up"
      data-aos-duration="2000">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/NFkbJQz/anniversary-2.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/t2xGnjd/weeding-3.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/17RpZC9/weeding-4.jpg" alt=""/>
         </div>
     </div>
 
     <div className="grid gap-4" data-aos="fade-up"
      data-aos-duration="2000">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/t2xGnjd/weeding-3.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/RQVyb3Z/birthday-1.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/hyttnfC/birthday-3.png" alt=""/>
         </div>
     </div>
 
-    <div className="grid gap-4" data-aos="fade-left"
+    <div className="grid gap-4" data-aos="zoom-in"
      data-aos-duration="2000">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/Wzb06mk/holiday-banner.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/vdsWGkw/holiday-2.png" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/s9yf2Mk/graduation-2.jpg" alt=""/>
         </div>
     </div>
 </div>

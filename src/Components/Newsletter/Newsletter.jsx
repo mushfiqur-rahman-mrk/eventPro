@@ -8,7 +8,10 @@ const Newsletter = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
-              Sign up for our newsletter
+              Sign up for our 
+              <span className="before:block before:absolute ml-3 my-4 before:-inset-1 before:-skew-y-3 before:bg-orange-500 relative inline-block">
+              <span className="relative text-white">newsletter</span>
+            </span>
             </h2>
             <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
             Sign up here to get the latest decorations, updates and special offers delivered directly to your inbox.

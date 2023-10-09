@@ -20,7 +20,7 @@ const HomeServiceCard = ({data}) => {
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
           <p>{description?.slice(0,100)}</p>
-          <p>{price}</p>
+          <p>Price- {price}</p>
           <div className="card-actions justify-center">
             <Link to={`/services/${id}`}>
             <button className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">

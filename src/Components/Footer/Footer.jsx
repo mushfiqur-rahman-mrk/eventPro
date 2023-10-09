@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import footimg from "/src/assets/logo2.png"
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
      <div className="relative bg-gradient-to-r from-orange-500 to-red-500 flex justify-center items-center">
      <footer className="grid grid-cols-1 md:grid-cols-4 w-full justify-center items-center pt-20 pb-10 ">
         <div>
-           <img className="w-40 mx-auto" src="/src/assets/logo2.png" alt="" />
+           <img className="w-40 mx-auto" src={footimg} alt="" />
            <p className="text-center font-semibold text-black">Your trusted event management</p>
            
         </div>
