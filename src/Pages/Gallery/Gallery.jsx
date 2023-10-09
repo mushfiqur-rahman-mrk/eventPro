@@ -40,7 +40,7 @@ const Gallery = () => {
     <div className="grid gap-4" data-aos="fade-up"
      data-aos-duration="2000">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/t2xGnjd/weeding-3.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/0BY7NTd/nameing-party-4.jpg" alt=""/>
         </div>
         <div>
             <img className="h-auto max-w-full rounded-lg" src="https://i.ibb.co/RQVyb3Z/birthday-1.jpg" alt=""/>
