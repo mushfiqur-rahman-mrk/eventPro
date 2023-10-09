@@ -101,7 +101,10 @@ const Home = () => {
 
       <WhyUs></WhyUs>
       <div className="max-w-7xl mx-auto my-20">
-        <h1 className="text-4xl mb-10 font-bold text-center">Our Services</h1>
+      <div>
+            <h1 className='text-3xl font-bold text-center mt-10'>Our Services</h1>
+            <hr className='w-28 mt-2 h-2 mb-10 rounded-full bg-orange-500 mx-auto'></hr>
+        </div>
         <div >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 px-5">
             {
@@ -110,7 +113,7 @@ const Home = () => {
           </div>
           <div className="card-actions justify-center mt-10">
                 <Link to={"/services"}>
-                  <button className="bg-red-600 px-4 py-2 rounded-md text-white hover:bg-red-500 hover:text-black">
+                  <button className="px-5 text-white font-semibold bg-gradient-to-r from-red-600 to-orange-500  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">
                     See All services
                   </button>
                 </Link>

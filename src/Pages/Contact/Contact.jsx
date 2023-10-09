@@ -11,8 +11,9 @@ const Contact = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="grid grid-cols-3 my-20 gap-8 max-w-6xl mx-auto justify-center items-center">
-        <div>
+      <div className="grid grid-cols-3 my-20 gap-8 max-w-6xl mx-auto justify-center items-center" data-aos="fade-up"
+     data-aos-duration="3000">
+        <div >
           <img className="rounded-br-full" src={logimage1} alt="" />
           <img className="rounded-tr-full" src={logimage2} alt="" />
         </div>

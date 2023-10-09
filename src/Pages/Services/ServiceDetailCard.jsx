@@ -30,7 +30,8 @@ const ServiceDetailCard = ({ eventData }) => {
     <Navbar></Navbar>
         <div>
           <div className="bg-red-600 h-20"></div>
-          <div className="grid grid-cols-2 items-center max-w-5xl gap-10 mx-auto">
+          <div className="grid grid-cols-2 items-center max-w-5xl gap-10 mx-auto" data-aos="fade-up"
+     data-aos-duration="3000">
             <div className="border">
               <div className="mb-2">
                 <img src={image} alt="" />
@@ -50,7 +51,8 @@ const ServiceDetailCard = ({ eventData }) => {
               </div>
             </div>
           </div>
-          <div className="my-20">
+          <div className="my-20" data-aos="fade-up"
+     data-aos-duration="3000">
             <h1 className="font-bold text-2xl text-center mb-10">
               Our Recent Pogram image
             </h1>

@@ -5,8 +5,13 @@ const Testimonial = () => {
   return (
     <>
     <Navbar></Navbar>
-     <div className="grid grid-cols-1 gap-10 max-w-6xl mx-auto my-20">
-     <div className="bg-white dark:bg-gray-900 shadow-lg  rounded-xl border-b-8 border-orange-500">
+    <div>
+            <h1 className='text-2xl font-bold text-center mt-10'>Testimonial</h1>
+            <hr className='w-28 mt-2 h-2 rounded-full bg-orange-500 mx-auto'></hr>
+        </div>
+     <div className="grid grid-cols-1 gap-10 max-w-6xl mx-auto my-20 px-8">
+     <div className="bg-white dark:bg-gray-900 shadow-lg  rounded-xl border-t-8 border-orange-500" data-aos="fade-up"
+     data-aos-duration="2000">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="max-w-screen-md mx-auto">
             <svg
@@ -47,7 +52,8 @@ const Testimonial = () => {
 
  
 
-     <div className="bg-white dark:bg-gray-900 shadow-lg border rounded-xl border-orange-500">
+     <div className="bg-white dark:bg-gray-900 shadow-lg rounded-xl border-t-8 border-orange-500" data-aos="fade-up"
+     data-aos-duration="2000">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="max-w-screen-md mx-auto">
             <svg
@@ -86,7 +92,8 @@ const Testimonial = () => {
         </div>
       </div>
 
-     <div className="bg-white dark:bg-gray-900 shadow-lg border rounded-xl border-orange-500">
+     <div className="bg-white dark:bg-gray-900 shadow-lg rounded-xl border-t-8 border-orange-500" data-aos="fade-up"
+     data-aos-duration="2000">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="max-w-screen-md mx-auto">
             <svg
@@ -125,7 +132,8 @@ const Testimonial = () => {
         </div>
       </div>
 
-     <div className="bg-white dark:bg-gray-900 shadow-lg border rounded-xl border-orange-500">
+     <div className="bg-white dark:bg-gray-900 shadow-lg border-t-8 rounded-xl border-orange-500" data-aos="fade-up"
+     data-aos-duration="2000">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="max-w-screen-md mx-auto">
             <svg

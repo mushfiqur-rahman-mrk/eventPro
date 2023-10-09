@@ -8,6 +8,7 @@ const Footer = () => {
      <footer className="grid grid-cols-1 md:grid-cols-4 w-full justify-center items-center pt-20 pb-10 ">
         <div>
            <img className="w-40 mx-auto" src="/src/assets/logo2.png" alt="" />
+           <p className="text-center font-semibold text-black">Your trusted event management</p>
            
         </div>
         <nav className="flex flex-col items-center">
