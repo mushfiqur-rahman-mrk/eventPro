@@ -20,6 +20,7 @@ const Authentication = ({children}) => {
     }
     // sign in with google
     const google=()=>{
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 

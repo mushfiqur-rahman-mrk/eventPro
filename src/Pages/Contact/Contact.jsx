@@ -1,6 +1,7 @@
 import Navbar from "../../Components/Header/Navbar";
 import { Datepicker } from "flowbite-react";
 import logimage2 from "/src/assets/login3.jpeg";
+import logimage1 from "/src/assets/login1.jpeg";
 
 const Contact = () => {
    const handleSubmit=(e)=>{
@@ -10,9 +11,10 @@ const Contact = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="grid grid-cols-3  my-20 gap-8 max-w-6xl mx-auto justify-center items-center">
+      <div className="grid grid-cols-3 my-20 gap-8 max-w-6xl mx-auto justify-center items-center">
         <div>
-          <img className="rounded-t-full" src={logimage2} alt="" />
+          <img className="rounded-br-full" src={logimage1} alt="" />
+          <img className="rounded-tr-full" src={logimage2} alt="" />
         </div>
         <div className="col-span-2">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
@@ -127,7 +129,7 @@ const Contact = () => {
                   >
                     Send message
                   </button>
-                  <button  className="btn w-1/2">Submit</button>
+                  <button  className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl shadow-lg w-1/2">Submit</button>
                 </form>
                 
               </div>

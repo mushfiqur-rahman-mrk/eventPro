@@ -6,13 +6,31 @@ import BannerSlider from "../../Components/Header/BannerSlider";
 import logoimg from "../../../src/assets/logo1.png"
 import NumberBar from "../../Components/NumberBar";
 import "./home.css";
+import Newsletter from "../../Components/Newsletter/Newsletter";
+import { useContext } from "react";
+import { AuthContext } from "../../Authentication/Authentication";
 
 const Home = () => {
   const ServiceData = useLoaderData([]);
-  const navlinks=<>
-  <li className="font-semibold text-lg"><NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-500 bg-red-200" : ""}>Home</NavLink></li>
-  <li className="font-semibold text-white text-lg"><NavLink to="/services" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-500 bg-red-200" : ""}>Services</NavLink></li>
-  <li className="font-semibold text-lg"><NavLink to="/contact" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-red-500 bg-red-200" : ""}>Contact Us</NavLink></li>
+  const {user,logOut}=useContext(AuthContext)
+  const handleLogout=()=>{
+    logOut()
+    .then(()=>{
+      console.log('logged out successfully');
+    })
+    .catch(error=>console.log(error))
+  }
+
+    const navlinks=<>
+  <li className="font-semibold text-md text-white"><NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "bg-orange-500 text-white" : ""}>Home</NavLink></li>
+  <li className="font-semibold text-md text-white"><NavLink to="/services" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "bg-orange-500 text-white" : ""}>Services</NavLink></li>
+  <li className="font-semibold text-md text-white"><NavLink to="/contact" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "bg-orange-500 text-white" : ""}>Contact Us</NavLink></li>
+  
+  {
+    user && <><li className="font-semibold text-md text-white"><NavLink to="/gallery" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "bg-orange-500 text-white" : ""}>Gallery</NavLink></li>
+    <li className="font-semibold text-md text-white"><NavLink to="/testimonial" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "bg-orange-500 text-white" : ""}>Testimonial</NavLink></li></>
+  }
+
   </>
 
   return (
@@ -48,7 +66,6 @@ const Home = () => {
                
             </ul>
           </div>
-          {/* <a className="btn btn-ghost normal-case text-xl">{logoimg}</a> */}
           <img className="h-16" src={logoimg} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -59,7 +76,12 @@ const Home = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        <Link to={'/signup'}><button className="btn">Sign Up</button></Link>
+        {
+            user ? <button onClick={handleLogout} className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Log Out</button>
+            :
+            <Link to={'/signup'}><button className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Sign Up</button></Link>
+          }
+        {/* <Link to={'/signup'}><button className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Sign Up</button></Link> */}
         </div>
       </div>
     </div>
@@ -97,6 +119,7 @@ const Home = () => {
       </div>
       <NumberBar></NumberBar>      
       <Review></Review>
+      <Newsletter></Newsletter>
     </div>
   );
 };

@@ -10,12 +10,16 @@ import ServicesDetail from "../Pages/Services/ServicesDetail";
 import Login from "../Components/Login.jsx/Login";
 import Signup from "../Components/Signup.jsx/Signup";
 import PrivateRoute from "./PrivateRoute";
+import Gallery from "../Pages/Gallery/Gallery";
+import Error from "../Pages/Error/Error";
+import Testimonial from "../Pages/Testimonial/Testimonial";
 
 
   const Route = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement: <Error></Error>,
       children:[
         {
             path:"/",
@@ -43,6 +47,14 @@ import PrivateRoute from "./PrivateRoute";
         {
           path:"/signup",
           element:<Signup></Signup>
+        },
+        {
+          path:'/gallery',
+          element: <Gallery></Gallery>
+        },
+        {
+          path:'/testimonial',
+          element:<Testimonial></Testimonial>
         }
       ]
     },
