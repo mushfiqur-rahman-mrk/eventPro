@@ -4,11 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Authentication/Authentication";
 import logimage2 from "/src/assets/login3.jpeg";
 import { FcGoogle } from "react-icons/fc";
- 
+import swal from 'sweetalert';
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
-  const { emailLogin } = useContext(AuthContext);
+  const { emailLogin,google } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [show,setShow]=useState(false)
   const location = useLocation();
@@ -24,12 +24,25 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         console.log("successfully loged in");
+        swal("Logged in successfully", "", "success");
+        // toast("Wow so easy!")
         navigate(location?.state ? location.state : "/");
         e.target.reset();
       })
       .catch((error) => {
         console.log(error.message);
         setError(error.message);
+      });
+  };
+  const handleGoogle = () => {
+    google()
+      .then((result) => {
+        console.log(result.user);
+        swal("Account Created successfully", "", "success");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log(error.message);
       });
   };
   return (
@@ -43,7 +56,7 @@ const Login = () => {
           {/* google login */}
           <div className="flex flex-col gap-5 items-center justify-center">
             <div>
-              <button className="btn">
+              <button className="btn" onClick={handleGoogle}>
                 <FcGoogle className="text-2xl"></FcGoogle>Continue With Google
               </button>
                
@@ -75,7 +88,7 @@ const Login = () => {
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="name@company.com"
-                      required=""
+                      required
                     />
                   </div>
                   <div className="relative">
@@ -91,7 +104,7 @@ const Login = () => {
                       id="password"
                       placeholder="••••••••"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      required=""
+                      required
                     />
                     <span className="absolute text-2xl top-2/4 right-4" onClick={()=>setShow(!show)}>
                       {
@@ -113,6 +126,7 @@ const Login = () => {
                   >
                     Log in
                   </button>
+                   
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                     Don`t have an account yet?{" "}
                     <Link

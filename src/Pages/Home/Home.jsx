@@ -1,6 +1,6 @@
 import { Link, NavLink, useLoaderData } from "react-router-dom";
 import HomeServiceCard from "./HomeServiceCard";
-import Review from "./Review";
+import usericn from "../../../src/assets/user.png"
 import WhyUs from "./WhyUs";
 import BannerSlider from "../../Components/Header/BannerSlider";
 import logoimg from "../../../src/assets/logo1.png"
@@ -77,7 +77,26 @@ const Home = () => {
         </div>
         <div className="navbar-end">
         {
-            user ? <button onClick={handleLogout} className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Log Out</button>
+            user ? <>
+            <div className="dropdown dropdown-bottom dropdown-end">
+              <label tabIndex={0} className=" mt-1 "><div className="h-8 w-8 mr-2">
+                
+              {
+                user?.photoURL ? <img className="rounded-full cursor-pointer" src={user.photoURL} alt="" />
+                :
+                <img className="rounded-full cursor-pointer" src={usericn} alt="" />
+              }
+                   
+                
+               </div></label>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-orange-100 rounded-box w-60 mt-5">
+              <li><a>{user.displayName ? user.displayName : 'no name found'}</a></li>
+              <li><a>{user.email}</a></li>
+            </ul>
+          </div>
+            <button onClick={handleLogout} className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Log Out</button>
+            
+            </>
             :
             <Link to={'/signup'}><button className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Sign Up</button></Link>
           }
@@ -121,7 +140,7 @@ const Home = () => {
         </div>
       </div>
       <NumberBar></NumberBar>      
-      <Review></Review>
+       
       <Newsletter></Newsletter>
     </div>
   );

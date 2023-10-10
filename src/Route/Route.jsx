@@ -19,7 +19,7 @@ import Testimonial from "../Pages/Testimonial/Testimonial";
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-      // errorElement: <Error></Error>,
+      errorElement: <Error></Error>,
       children:[
         {
             path:"/",
@@ -50,11 +50,11 @@ import Testimonial from "../Pages/Testimonial/Testimonial";
         },
         {
           path:'/gallery',
-          element: <Gallery></Gallery>
+          element:<PrivateRoute><Gallery></Gallery></PrivateRoute> 
         },
         {
           path:'/testimonial',
-          element:<Testimonial></Testimonial>
+          element:<PrivateRoute><Testimonial></Testimonial></PrivateRoute>
         }
       ]
     },

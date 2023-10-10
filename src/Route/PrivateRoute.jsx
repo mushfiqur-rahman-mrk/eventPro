@@ -29,7 +29,7 @@ const PrivateRoute = ({children}) => {
 };
 
 PrivateRoute.propTypes = {
-    
+  children: PropTypes.node,
 };
 
 export default PrivateRoute;

@@ -2,14 +2,17 @@ import { Link, NavLink } from "react-router-dom";
 import logoimg from "../../../src/assets/logo1.png"
 import { useContext } from "react";
 import { AuthContext } from "../../Authentication/Authentication";
+import usericn from "../../../src/assets/user.png"
+import swal from 'sweetalert';
 
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext)
-
+  console.log(user);
   const handleLogout=()=>{
     logOut()
     .then(()=>{
       console.log('logged out successfully');
+      swal("Logged out successfully", "", "success");
     })
     .catch(error=>console.log(error))
   }
@@ -50,7 +53,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-md dropdown-content mt-4 z-[1] p-2 shadow bg-orange-300 rounded-box w-96"
+              className="menu menu-md dropdown-content mt-4 z-[1] p-2 shadow bg-orange-300 rounded-box w-60"
             >
               {navlinks}
               
@@ -69,7 +72,26 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {
-            user ? <button onClick={handleLogout} className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Log Out</button>
+            user ? <>
+            <div className="dropdown dropdown-bottom dropdown-end">
+              <label tabIndex={0} className=" mt-1 "><div className="h-8 w-8 mr-2">
+                
+              {
+                user?.photoURL ? <img className="rounded-full" src={user.photoURL} alt="" />
+                :
+                <img className="rounded-full" src={usericn} alt="" />
+              }
+                   
+                
+               </div></label>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-orange-100 rounded-box w-52 mt-5">
+              <li><a>{user.displayName ? user.displayName : 'no name found'}</a></li>
+              <li><a>{user.email}</a></li>
+            </ul>
+          </div>
+            <button onClick={handleLogout} className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Log Out</button>
+            
+            </>
             :
             <Link to={'/signup'}><button className="px-5 text-white font-semibold bg-gradient-to-r from-orange-500 to-red-600  hover:ease-in py-3 transition duration-150 hover:text-black rounded-xl">Sign Up</button></Link>
           }

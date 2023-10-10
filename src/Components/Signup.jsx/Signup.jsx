@@ -1,16 +1,17 @@
 import Navbar from "../Header/Navbar";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Authentication/Authentication";
 import logimage1 from "/src/assets/login1.jpeg";
 import { AiOutlineEyeInvisible,AiOutlineEye } from "react-icons/ai"
+import swal from 'sweetalert';
 
 const Signup = () => {
   const { createUser, google } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [show,setShow]=useState(false)
+  const location = useLocation();
   const navigate=useNavigate()
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -36,6 +37,7 @@ const Signup = () => {
         console.log(result.user);
         setError('Account created successfully')
         e.target.reset();
+        swal("Account Created successfully", "", "success");
         navigate('/')
         
       })
@@ -48,6 +50,8 @@ const Signup = () => {
     google()
       .then((result) => {
         console.log(result.user);
+        swal("Account Created successfully", "", "success");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -99,7 +103,23 @@ const Signup = () => {
                       id="name"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Your name"
-                      required=""
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="text"
+                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Your photo url
+                    </label>
+                    <input
+                      type="text"
+                      name="text"
+                      id="photurl"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Your photo url"
+                      
                     />
                   </div>
                   <div>
@@ -115,7 +135,7 @@ const Signup = () => {
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="name@company.com"
-                      required=""
+                      required
                     />
                   </div>
                   <div className="relative">
@@ -131,7 +151,7 @@ const Signup = () => {
                       id="password"
                       placeholder="••••••••"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      required=""
+                      required
                     />
                     <span className="absolute text-2xl top-2/4 right-4" onClick={()=>setShow(!show)}>
                       {

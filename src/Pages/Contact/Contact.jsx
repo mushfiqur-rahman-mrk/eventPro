@@ -2,10 +2,12 @@ import Navbar from "../../Components/Header/Navbar";
 import { Datepicker } from "flowbite-react";
 import logimage2 from "/src/assets/login3.jpeg";
 import logimage1 from "/src/assets/login1.jpeg";
+import swal from 'sweetalert';
 
 const Contact = () => {
    const handleSubmit=(e)=>{
     e.preventDefault();
+    swal("Messege submitted successfully", "", "success");
     e.target.reset();
    }
   return (
@@ -62,6 +64,12 @@ const Contact = () => {
                   </div>
                   </div>
                   <div className="grid grid-cols-2 gap-10">
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                      Your event date
+                    </label>
+                    <Datepicker weekStart={2} />
+                  </div>
                     <div>
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Your event type
@@ -89,12 +97,7 @@ const Contact = () => {
                     </div>
                  
 
-                  <div>
-                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                      Your event date
-                    </label>
-                    <Datepicker weekStart={2} />
-                    </div>
+                  
                   </div>
 
                   <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
