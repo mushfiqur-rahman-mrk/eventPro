@@ -3,7 +3,7 @@ import { BsCheck2Circle } from "react-icons/bs";
 const WhyUs = () => {
   return (
     <>
-      <div className="grid max-w-2xl grid-cols-1 md:grid-cols-2 gap-10 px-5 justify-center items-center my-20 mx-auto">
+      <div className="grid max-w-2xl grid-cols-1 border md:grid-cols-2 gap-10 px-5 justify-center items-center my-20 mx-auto">
         <div data-aos="zoom-in" data-aos-duration="2000">
           <h1 className="text-4xl font-bold text-center">
             Why we are <br />
